@@ -9,7 +9,6 @@
     "stopTestEnvironment": "docker-compose down -v",
     "start": "npm run startTestEnvironment && node server.js",
     "dev": "npm run startTestEnvironment && nodemon server.js"
-
   },
   "keywords": [],
   "author": "",
