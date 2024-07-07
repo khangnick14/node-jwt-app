@@ -10,7 +10,10 @@ async function getUserById(id) {
   return user;
 }
 
-async function createUser(username, email, password) {
+async function createUser({ username, email, password }) {
+  console.log(username);
+  console.log(email);
+  console.log(password);
   const newUser = await User.create({ username, email, password });
   return newUser;
 }
