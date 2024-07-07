@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import sequelize from "./config/database.js";
 import User from "./model/User.js";
 import Job from "./model/Job.js";
+import { userRouter } from "./route/UserRoute.js";
 
 const app = express();
 
@@ -16,6 +17,9 @@ sequelize
   });
 
 app.use(bodyParser.json());
+
+// Routes
+app.use("/api/users", userRouter);
 
 const PORT = 8080;
 app.listen(PORT, () => {
