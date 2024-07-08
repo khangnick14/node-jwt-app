@@ -4,6 +4,7 @@ import sequelize from "./config/database.js";
 import User from "./model/User.js";
 import Job from "./model/Job.js";
 import { userRouter } from "./route/UserRoute.js";
+import { jobRouter } from "./route/JobRoute.js";
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/api/users", userRouter);
+app.use("/api/jobs", jobRouter);
 
 const PORT = 8080;
 app.listen(PORT, () => {

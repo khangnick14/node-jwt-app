@@ -10,7 +10,7 @@ async function getJobById(id) {
   return job;
 }
 
-async function createJob(title, description, userId) {
+async function createJob({ title, description, userId }) {
   const newJob = await Job.create({ title, description, user_id: userId });
   return newJob;
 }
